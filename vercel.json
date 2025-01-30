@@ -1,10 +1,27 @@
 {
     "version": 2,
-    "functions": {
-        "api/index.php": {
-            "runtime": "vercel-php@0.6.0"
+    "builds": [
+        {
+            "src": "api/index.php",
+            "use": "vercel-php@0.6.0",
+            "config": {
+                "runtime": {
+                    "extensions": [
+                        "mbstring",
+                        "xml",
+                        "ctype",
+                        "dom",
+                        "json",
+                        "iconv",
+                        "fileinfo",
+                        "pdo",
+                        "pdo_mysql",
+                        "openssl"
+                    ]
+                }
+            }
         }
-    },
+    ],
     "routes": [
         {
             "src": "/(.*)",
@@ -13,7 +30,7 @@
     ],
     "env": {
         "APP_NAME": "Lavercel",
-        "APP_ENV":"production",
+        "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://vercell-1xz9j6nnk-iqbaljlldns-projects.vercel.app",
         "APP_CONFIG_CACHE": "/tmp/config.php",
@@ -21,23 +38,17 @@
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
-        "VIEW_COMPILED_PATH": "/tmp",
+        "VIEW_COMPILED_PATH": "/tmp/views",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
-        "VIEW_COMPILED_PATH": "/tmp/views",
         "SSR_TEMP_PATH": "/tmp/ssr",
         "NODE_PATH": "node",
-        "DB_CONNECTION":"mysql",
-        "DB_HOST":"oimzq.h.filess.io",
-        "DB_PORT":"3307",
-        "DB_DATABASE":"example",
-        "DB_USERNAME":"example_beyondmeat"
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "oimzq.h.filess.io",
+        "DB_PORT": "3307",
+        "DB_DATABASE": "example",
+        "DB_USERNAME": "example_beyondmeat"
     },
-    "outputDirectory": "public",
-    "build": {
-        "env": {
-            "NOW_PHP_DEBUG": "1"
-        }
-    }
+    "outputDirectory": "public"
 }
