@@ -48,7 +48,8 @@
         "DB_HOST": "oimzq.h.filess.io",
         "DB_PORT": "3307",
         "DB_DATABASE": "example",
-        "DB_USERNAME": "example_beyondmeat"
+        "DB_USERNAME": "example_beyondmeat",
+        "DB_PASSWORD": "0868cce9c2d00918934a25e7070d2a892b8d4531"
     },
     "outputDirectory": "public"
 }
