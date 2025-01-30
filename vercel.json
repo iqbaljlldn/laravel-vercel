@@ -34,5 +34,10 @@
         "DB_DATABASE":"example",
         "DB_USERNAME":"example_beyondmeat"
     },
-    "outputDirectory": "public"
+    "outputDirectory": "public",
+    "build": {
+        "env": {
+            "NOW_PHP_DEBUG": "1"
+        }
+    }
 }
